@@ -24,7 +24,7 @@ export default class SearchClient {
 
   collections<TDocumentSchema extends DocumentSchema = {}>(
     collectionName: string
-  ): SearchOnlyCollection<TDocumentSchema> | SearchOnlyCollection {
+  ): SearchOnlyCollection<TDocumentSchema> {
     if (!collectionName) {
       throw new Error(
         'Typesense.SearchClient only supports search operations, so the collectionName that needs to ' +
@@ -42,3 +42,4 @@ export default class SearchClient {
     }
   }
 }
+
